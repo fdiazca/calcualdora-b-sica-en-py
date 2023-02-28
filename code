@@ -1,0 +1,67 @@
+# Definición de la función para la suma
+
+def suma(num1, num2):
+    return num1 + num2
+
+# Definición de la función para la resta
+
+def resta(num1, num2):
+    return num1 - num2
+
+# Definición para la función multiplicación
+
+def multiplicacion(num1, num2):
+    return num1 * num2
+
+# Definición para la función división
+
+def division(num1, num2):
+    return num1/num2
+
+# Definición para cuadrado
+
+def potencia(num1, num2):
+    return num1 ** num2
+
+# Definicion para n-raiz
+import math
+
+def raiz(num1, num2):
+    return pow(num1, 1/num2)
+
+# Imprimir el menu en un bucle
+
+while True:
+    print("por favor elige una opción:")
+    print("1. sumar")
+    print("2. restar")
+    print("3. multiplicar")
+    print("4. dividir")
+    print("5. potencia")
+    print("6. raiz n-sima")
+    # tomar la entrada del usuario
+    opcion = input("ingresa tu opción (1/2/3/4/5/6):  ")
+    # tomar la entra de los numeros
+    num1 = int(input("ingresar el primer número:  "))
+    num2 = int(input("ingresar el segundo número:  "))
+    # ejecutar la operacion matematica seleccionada
+    if opcion == '1':
+         print(num1, "+", num2, "=", suma(num1, num2))
+    elif opcion == '2':
+        print(num1, "-", num2, "=", resta(num1, num2))
+    elif opcion == '3':
+        print(num1, "*", num2, "=", multiplicacion(num1, num2))
+    elif opcion == '4':
+        print(num1, "/", num2, "=", division(num1, num2))
+    elif opcion == '5':
+        print("cuadrado de: ", num1, "^", num2, "=", potencia(num1, num2))
+    elif opcion == '6':
+        print("raiz ", num2, "de: ", num1, "=", raiz(num1, num2))
+    else:
+        print("opcion invalida")
+        # continuar en el bucle o no
+    respuesta = input("deseas realizar otra operacion? (s/n):  ")
+    if respuesta.lower() == 'n':
+        break
+
+print("Programa finalizado. Gracias")
